@@ -116,7 +116,10 @@ namespace WindowsFormsApp19
                 SQLiteDataReader sdr = com.ExecuteReader();
                 while (sdr.Read() == true)
                 {
-                    textBox1.Text = sdr["PRICE"].ToString();
+                    textBox1.Text = sdr["NO"].ToString();
+                    textBox1.Text += sdr["DATETIME"].ToString();
+                    textBox1.Text += sdr["NAME"].ToString();
+                    textBox1.Text += sdr["PRICE"].ToString();
                 }
                 sdr.Close();
             }
