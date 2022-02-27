@@ -39,7 +39,7 @@ namespace WindowsFormsApp19
             query.Append(" NO INTEGER NOT NULL");
             query.Append(" ,DATETIME TEXT NOT NULL");
             query.Append(" ,NAME TEXT NOT NULL");
-            query.Append(" ,PRICE INTEGER NOT NULL");
+            query.Append(" ,POINT INTEGER NOT NULL");
             query.Append(" ,primary key (NO)");
             query.Append(")");
 
@@ -74,11 +74,11 @@ namespace WindowsFormsApp19
             }
         }
 
-        private void InsertRecord(int no, string datetime, string name, int price)
+        private void InsertRecord(int no, string datetime, string name, int point)
         {
             // レコードの登録
-            var query = "INSERT INTO PURCHASELIST (NO,DATETIME,NAME,PRICE) VALUES (" +
-                $"{no},'{datetime}','{name}',{price})";
+            var query = "INSERT INTO PURCHASELIST (NO,DATETIME,NAME,POINT) VALUES (" +
+                $"{no},'{datetime}','{name}',{point})";
 
             // クエリー実行
             ExecuteNonQuery(query.ToString());
@@ -86,10 +86,10 @@ namespace WindowsFormsApp19
 
         private void button4_Click(object sender, EventArgs e)
         {
-            InsertRecord(1, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "佐藤浩二", 100);
-            InsertRecord(2, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "meet", 350);
-            InsertRecord(3, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "snacks", 200);
-            InsertRecord(4, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "juice", 150);
+            InsertRecord(1, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "佐藤浩二", 85);
+            InsertRecord(2, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "山田孝雄", 70);
+            InsertRecord(3, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "鈴木健司", 50);
+            InsertRecord(4, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "吉田将司", 65);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -119,7 +119,7 @@ namespace WindowsFormsApp19
                     textBox1.Text = sdr["NO"].ToString();
                     textBox1.Text += sdr["DATETIME"].ToString();
                     textBox1.Text += sdr["NAME"].ToString();
-                    textBox1.Text += sdr["PRICE"].ToString();
+                    textBox1.Text += sdr["POINT"].ToString();
                 }
                 sdr.Close();
             }
@@ -147,7 +147,7 @@ namespace WindowsFormsApp19
                     textBox1.Text += " : ";
                     textBox1.Text += sdr["NAME"].ToString();
                     textBox1.Text += " : ";
-                    textBox1.Text += sdr["PRICE"].ToString();
+                    textBox1.Text += sdr["POINT"].ToString();
                     textBox1.Text += "\r\n";
                 }
                 sdr.Close();
@@ -176,10 +176,10 @@ namespace WindowsFormsApp19
             ExecuteNonQuery(query.ToString());
         }
 
-        private void UpdateRecord(int no, string datetime, string name, int price)
+        private void UpdateRecord(int no, string datetime, string name, int point)
         {
             // レコードの登録
-            var query = $"UPDATE PURCHASELIST SET DATETIME = '{datetime}', NAME = '{name}',PRICE = '{price}' " +
+            var query = $"UPDATE PURCHASELIST SET DATETIME = '{datetime}', NAME = '{name}',POINT = '{point}' " +
                 $"WHERE NO = {no};";
 
             // クエリー実行
@@ -196,12 +196,12 @@ namespace WindowsFormsApp19
 
         private void button8_Click(object sender, EventArgs e)
         {
-            DeleteRecord("NAME", "coffee");
+            DeleteRecord("NAME", textBox2.Text);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            UpdateRecord(1, DateTime.Now.ToString(), "更新太郎", 100);
+            UpdateRecord(int.Parse(textBox3.Text), DateTime.Now.ToString(), textBox4.Text, 100);
         }
 
         private void button10_Click(object sender, EventArgs e)
