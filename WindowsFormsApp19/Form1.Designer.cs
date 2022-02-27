@@ -37,6 +37,10 @@ namespace WindowsFormsApp19
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -71,10 +75,10 @@ namespace WindowsFormsApp19
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(277, 173);
+            this.textBox1.Location = new System.Drawing.Point(60, 191);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 100);
+            this.textBox1.Size = new System.Drawing.Size(493, 215);
             this.textBox1.TabIndex = 3;
             // 
             // button4
@@ -93,7 +97,7 @@ namespace WindowsFormsApp19
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(107, 44);
             this.button5.TabIndex = 5;
-            this.button5.Text = "読み出し";
+            this.button5.Text = "検索";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -109,16 +113,60 @@ namespace WindowsFormsApp19
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(277, 148);
+            this.textBox2.Location = new System.Drawing.Point(60, 154);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(103, 19);
             this.textBox2.TabIndex = 7;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(635, 181);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(107, 38);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "テーブル削除";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(635, 241);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(107, 31);
+            this.button8.TabIndex = 9;
+            this.button8.Text = "レコード削除";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(634, 303);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(107, 29);
+            this.button9.TabIndex = 10;
+            this.button9.Text = "更新";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(474, 113);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(110, 44);
+            this.button10.TabIndex = 11;
+            this.button10.Text = "全読み出し";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -145,6 +193,10 @@ namespace WindowsFormsApp19
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }
 
