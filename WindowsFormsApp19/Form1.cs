@@ -24,6 +24,7 @@ namespace WindowsFormsApp19
 
         private void button1_Click(object sender, EventArgs e)
         {
+            textBox1.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -196,7 +197,7 @@ namespace WindowsFormsApp19
 
         private void button8_Click(object sender, EventArgs e)
         {
-            DeleteRecord("NAME", textBox2.Text);
+            DeleteRecord("NAME", textBox8.Text);
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -207,6 +208,12 @@ namespace WindowsFormsApp19
         private void button10_Click(object sender, EventArgs e)
         {
             SerachRecordDataAll("NAME", textBox2.Text);
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            InsertRecord(int.Parse(textBox5.Text), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), textBox6.Text, int.Parse(textBox7.Text));
 
         }
     }
