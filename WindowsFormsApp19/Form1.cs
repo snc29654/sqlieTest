@@ -87,10 +87,10 @@ namespace WindowsFormsApp19
 
         private void button4_Click(object sender, EventArgs e)
         {
-            InsertRecord(1, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "佐藤浩二", 85);
-            InsertRecord(2, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "山田孝雄", 70);
-            InsertRecord(3, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "鈴木健司", 50);
-            InsertRecord(4, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "吉田将司", 65);
+            InsertRecord(202101, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "佐藤浩二", 85);
+            InsertRecord(202102, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "山田孝雄", 70);
+            InsertRecord(202103, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "鈴木健司", 50);
+            InsertRecord(202104, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "吉田将司", 65);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -197,12 +197,12 @@ namespace WindowsFormsApp19
 
         private void button8_Click(object sender, EventArgs e)
         {
-            DeleteRecord("NAME", textBox8.Text);
+            DeleteRecord("NO", textBox8.Text);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            UpdateRecord(int.Parse(textBox3.Text), DateTime.Now.ToString(), textBox4.Text, 100);
+            UpdateRecord(int.Parse(textBox3.Text), DateTime.Now.ToString(), textBox4.Text, int.Parse(textBox9.Text));
         }
 
         private void button10_Click(object sender, EventArgs e)
