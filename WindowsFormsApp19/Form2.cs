@@ -88,10 +88,63 @@ namespace WindowsFormsApp19
             // クエリー実行
             ExecuteNonQuery(query.ToString());
         }
+        private void SerachRecordDataAll()
+        {
+            SQLiteConnection con = new SQLiteConnection("Data Source=Memo.db");
+            con.Open();
+            try
+            {
+                string sql = "SELECT * FROM PURCHASELIST  ORDER BY NO ASC";
+
+                SQLiteCommand com = new SQLiteCommand(sql, con);
+                SQLiteDataReader sdr = com.ExecuteReader();
+                while (sdr.Read() == true)
+                {
+                    textBox1.Text += sdr["NO"].ToString();
+                    textBox1.Text += " : ";
+                    textBox1.Text += sdr["DATETIME"].ToString();
+                    textBox1.Text += " : ";
+                    textBox1.Text += sdr["NAME"].ToString();
+                    textBox1.Text += " : ";
+                    textBox1.Text += sdr["POINT"].ToString();
+                    textBox1.Text += "\r\n";
+                }
+                sdr.Close();
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
             DropTable();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SerachRecordDataAll();
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            InsertRecord(int.Parse(textBox2.Text), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), textBox3.Text, int.Parse(textBox4.Text));
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            textBox3.Clear();
+
         }
     }
 
