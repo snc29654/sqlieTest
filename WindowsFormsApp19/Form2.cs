@@ -80,6 +80,19 @@ namespace WindowsFormsApp19
             InsertRecord(202104, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "吉田将司", 65);
 
         }
+        private void DropTable()
+        {
+            // テーブルの削除
+            var query = "DROP TABLE PURCHASELIST";
+
+            // クエリー実行
+            ExecuteNonQuery(query.ToString());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DropTable();
+        }
     }
 
 }
