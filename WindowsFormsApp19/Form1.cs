@@ -29,6 +29,14 @@ namespace WindowsFormsApp19
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Form2 f = new Form2();
+            //Form2を表示する
+            //ここではモーダルダイアログボックスとして表示する
+            //オーナーウィンドウにthisを指定する
+            f.ShowDialog(this);
+            //フォームが必要なくなったところで、Disposeを呼び出す
+            f.Dispose();
+
         }
 
         private void button3_Click(object sender, EventArgs e)

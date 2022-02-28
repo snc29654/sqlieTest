@@ -71,13 +71,12 @@ namespace WindowsFormsApp19
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(122, 412);
+            this.button2.Location = new System.Drawing.Point(758, 345);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 41);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "モーダル";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
