@@ -140,10 +140,57 @@ namespace WindowsFormsApp19
             textBox1.Clear();
 
         }
+        private void SerachRecordData2(string column, string word)
+        {
+
+            SQLiteConnection con = new SQLiteConnection("Data Source=Memo.db");
+            con.Open();
+            try
+            {
+                string sql = "SELECT * FROM PURCHASELIST WHERE " +
+                $"{column} = '{word}' ORDER BY NO ASC";
+
+                SQLiteCommand com = new SQLiteCommand(sql, con);
+                SQLiteDataReader sdr = com.ExecuteReader();
+                while (sdr.Read() == true)
+                {
+                    textBox2.Text = sdr["NO"].ToString();
+                    textBox3.Text = sdr["NAME"].ToString();
+                    textBox4.Text = sdr["POINT"].ToString();
+                }
+                sdr.Close();
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+        private void UpdateRecord(int no, string datetime, string name, int point)
+        {
+            // レコードの登録
+            var query = $"UPDATE PURCHASELIST SET DATETIME = '{datetime}', NAME = '{name}',POINT = '{point}' " +
+                $"WHERE NO = {no};";
+
+            // クエリー実行
+            ExecuteNonQuery(query.ToString());
+        }
 
         private void button7_Click(object sender, EventArgs e)
         {
             textBox3.Clear();
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            SerachRecordData2("NO", textBox2.Text);
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            UpdateRecord(int.Parse(textBox2.Text), DateTime.Now.ToString(), textBox3.Text, int.Parse(textBox4.Text));
 
         }
     }
