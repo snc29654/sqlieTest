@@ -58,6 +58,7 @@ namespace WindowsFormsApp19
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -72,7 +73,7 @@ namespace WindowsFormsApp19
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(758, 345);
+            this.button2.Location = new System.Drawing.Point(758, 276);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 41);
             this.button2.TabIndex = 1;
@@ -313,15 +314,26 @@ namespace WindowsFormsApp19
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(101, 37);
             this.button12.TabIndex = 22;
-            this.button12.Text = "継承";
+            this.button12.Text = "form2継承";
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(758, 333);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(100, 40);
+            this.button13.TabIndex = 23;
+            this.button13.Text = "form1継承";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 450);
+            this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox7);
@@ -390,6 +402,7 @@ namespace WindowsFormsApp19
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
     }
 }
 

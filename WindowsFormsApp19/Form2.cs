@@ -193,6 +193,11 @@ namespace WindowsFormsApp19
             UpdateRecord(int.Parse(textBox2.Text), DateTime.Now.ToString(), textBox3.Text, int.Parse(textBox4.Text));
 
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

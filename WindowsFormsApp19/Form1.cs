@@ -234,6 +234,14 @@ namespace WindowsFormsApp19
 
         }
 
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Form4 f = new Form4();
+            f.ShowDialog(this);
+            //フォームが必要なくなったところで、Disposeを呼び出す
+            f.Dispose();
+
+        }
     }
 }
 
