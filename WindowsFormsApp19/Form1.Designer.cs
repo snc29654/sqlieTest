@@ -265,7 +265,7 @@ namespace WindowsFormsApp19
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 12);
             this.label5.TabIndex = 16;
-            this.label5.Text = "点数";
+            this.label5.Text = "年齢";
             // 
             // label6
             // 
@@ -306,7 +306,7 @@ namespace WindowsFormsApp19
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 12);
             this.label8.TabIndex = 16;
-            this.label8.Text = "点数";
+            this.label8.Text = "年齢";
             // 
             // button12
             // 

@@ -24,7 +24,7 @@ namespace WindowsFormsApp19
 
         private void button10_Click(object sender, EventArgs e)
         {
-            SerachRecordData2("NAME", textBox2.Text);
+            SerachRecordData2("NAME", textBox5.Text);
 
         }
     }
