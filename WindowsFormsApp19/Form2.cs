@@ -140,7 +140,7 @@ namespace WindowsFormsApp19
             textBox1.Clear();
 
         }
-        private void SerachRecordData2(string column, string word)
+        public void SerachRecordData2(string column, string word)
         {
 
             SQLiteConnection con = new SQLiteConnection("Data Source=Memo.db");

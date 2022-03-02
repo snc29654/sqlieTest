@@ -48,9 +48,9 @@ namespace WindowsFormsApp19
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(39, 40);
+            this.button1.Location = new System.Drawing.Point(39, 63);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 56);
+            this.button1.Size = new System.Drawing.Size(84, 33);
             this.button1.TabIndex = 0;
             this.button1.Text = "テーブル作成";
             this.button1.UseVisualStyleBackColor = true;
@@ -58,9 +58,9 @@ namespace WindowsFormsApp19
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(141, 40);
+            this.button2.Location = new System.Drawing.Point(141, 63);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 56);
+            this.button2.Size = new System.Drawing.Size(84, 33);
             this.button2.TabIndex = 1;
             this.button2.Text = "一括追加";
             this.button2.UseVisualStyleBackColor = true;
@@ -68,9 +68,9 @@ namespace WindowsFormsApp19
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(675, 40);
+            this.button3.Location = new System.Drawing.Point(675, 63);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 56);
+            this.button3.Size = new System.Drawing.Size(83, 33);
             this.button3.TabIndex = 2;
             this.button3.Text = "テーブル削除";
             this.button3.UseVisualStyleBackColor = true;
@@ -78,9 +78,9 @@ namespace WindowsFormsApp19
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(243, 40);
+            this.button4.Location = new System.Drawing.Point(243, 63);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 56);
+            this.button4.Size = new System.Drawing.Size(84, 33);
             this.button4.TabIndex = 3;
             this.button4.Text = "全読み出し";
             this.button4.UseVisualStyleBackColor = true;
@@ -96,9 +96,9 @@ namespace WindowsFormsApp19
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(345, 40);
+            this.button5.Location = new System.Drawing.Point(345, 63);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(84, 56);
+            this.button5.Size = new System.Drawing.Size(84, 33);
             this.button5.TabIndex = 5;
             this.button5.Text = "レコード追加";
             this.button5.UseVisualStyleBackColor = true;
@@ -116,12 +116,12 @@ namespace WindowsFormsApp19
             this.textBox3.Location = new System.Drawing.Point(426, 141);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(332, 251);
+            this.textBox3.Size = new System.Drawing.Size(332, 29);
             this.textBox3.TabIndex = 7;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(427, 398);
+            this.textBox4.Location = new System.Drawing.Point(426, 176);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(87, 19);
             this.textBox4.TabIndex = 8;
@@ -148,19 +148,19 @@ namespace WindowsFormsApp19
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(447, 40);
+            this.button8.Location = new System.Drawing.Point(447, 63);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(84, 54);
+            this.button8.Size = new System.Drawing.Size(84, 31);
             this.button8.TabIndex = 11;
-            this.button8.Text = "検索";
+            this.button8.Text = "番号検索";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(549, 40);
+            this.button9.Location = new System.Drawing.Point(549, 63);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(84, 56);
+            this.button9.Size = new System.Drawing.Size(84, 33);
             this.button9.TabIndex = 12;
             this.button9.Text = "更新";
             this.button9.UseVisualStyleBackColor = true;
@@ -178,11 +178,11 @@ namespace WindowsFormsApp19
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(534, 401);
+            this.label2.Location = new System.Drawing.Point(533, 183);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 14;
-            this.label2.Text = "点数";
+            this.label2.Text = "年齢";
             // 
             // Form2
             // 
@@ -219,7 +219,7 @@ namespace WindowsFormsApp19
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button6;

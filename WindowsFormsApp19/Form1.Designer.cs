@@ -57,6 +57,7 @@ namespace WindowsFormsApp19
             this.label7 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -306,11 +307,22 @@ namespace WindowsFormsApp19
             this.label8.TabIndex = 16;
             this.label8.Text = "点数";
             // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(758, 391);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(101, 37);
+            this.button12.TabIndex = 22;
+            this.button12.Text = "継承";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 450);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
@@ -377,6 +389,7 @@ namespace WindowsFormsApp19
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button12;
     }
 }
 

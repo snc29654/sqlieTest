@@ -224,6 +224,16 @@ namespace WindowsFormsApp19
             InsertRecord(int.Parse(textBox5.Text), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), textBox6.Text, int.Parse(textBox7.Text));
 
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Form3 f = new Form3();
+            f.ShowDialog(this);
+            //フォームが必要なくなったところで、Disposeを呼び出す
+            f.Dispose();
+
+        }
+
     }
 }
 
