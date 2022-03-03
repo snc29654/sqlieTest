@@ -28,7 +28,7 @@ namespace WindowsFormsApp19
             query.Append(" NO INTEGER NOT NULL");
             query.Append(" ,DATETIME TEXT NOT NULL");
             query.Append(" ,NAME TEXT NOT NULL");
-            query.Append(" ,POINT INTEGER NOT NULL");
+            query.Append(" ,CONTENT TEXT NOT NULL");
             query.Append(" ,primary key (NO)");
             query.Append(")");
 
@@ -61,11 +61,11 @@ namespace WindowsFormsApp19
                 MessageBox.Show(ex.Message);
             }
         }
-        private void InsertRecord(int no, string datetime, string name, int point)
+        private void InsertRecord(int no, string datetime, string name, string content)
         {
             // レコードの登録
-            var query = "INSERT INTO PURCHASELIST (NO,DATETIME,NAME,POINT) VALUES (" +
-                $"{no},'{datetime}','{name}',{point})";
+            var query = "INSERT INTO PURCHASELIST (NO,DATETIME,NAME,CONTENT) VALUES (" +
+                $"{no},'{datetime}','{name}','{content}')";
 
             // クエリー実行
             ExecuteNonQuery(query.ToString());
@@ -74,10 +74,10 @@ namespace WindowsFormsApp19
 
         private void button2_Click(object sender, EventArgs e)
         {
-            InsertRecord(202101, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "佐藤浩二", 85);
-            InsertRecord(202102, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "山田孝雄", 70);
-            InsertRecord(202103, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "鈴木健司", 50);
-            InsertRecord(202104, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "吉田将司", 65);
+            InsertRecord(202101, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "日記", "記事１");
+            InsertRecord(202102, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "ニュース", "記事２");
+            InsertRecord(202103, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "メモ", "記事３");
+            InsertRecord(202104, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "住所", "記事４");
 
         }
         private void DropTable()
@@ -106,7 +106,7 @@ namespace WindowsFormsApp19
                     textBox1.Text += " : ";
                     textBox1.Text += sdr["NAME"].ToString();
                     textBox1.Text += " : ";
-                    textBox1.Text += sdr["POINT"].ToString();
+                    textBox1.Text += sdr["CONTENT"].ToString();
                     textBox1.Text += "\r\n";
                 }
                 sdr.Close();
@@ -131,7 +131,7 @@ namespace WindowsFormsApp19
 
         private void button5_Click(object sender, EventArgs e)
         {
-            InsertRecord(int.Parse(textBox2.Text), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), textBox3.Text, int.Parse(textBox4.Text));
+            InsertRecord(int.Parse(textBox2.Text), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), textBox3.Text, textBox4.Text);
 
         }
 
@@ -156,7 +156,7 @@ namespace WindowsFormsApp19
                 {
                     textBox2.Text = sdr["NO"].ToString();
                     textBox3.Text = sdr["NAME"].ToString();
-                    textBox4.Text = sdr["POINT"].ToString();
+                    textBox4.Text = sdr["CONTENT"].ToString();
                 }
                 sdr.Close();
             }
@@ -166,10 +166,10 @@ namespace WindowsFormsApp19
             }
 
         }
-        private void UpdateRecord(int no, string datetime, string name, int point)
+        private void UpdateRecord(int no, string datetime, string name, string content)
         {
             // レコードの登録
-            var query = $"UPDATE PURCHASELIST SET DATETIME = '{datetime}', NAME = '{name}',POINT = '{point}' " +
+            var query = $"UPDATE PURCHASELIST SET DATETIME = '{datetime}', NAME = '{name}', CONTENT = '{content}' " +
                 $"WHERE NO = {no};";
 
             // クエリー実行
@@ -178,7 +178,9 @@ namespace WindowsFormsApp19
 
         private void button7_Click(object sender, EventArgs e)
         {
+            textBox2.Clear();
             textBox3.Clear();
+            textBox4.Clear();
 
         }
 
@@ -190,7 +192,7 @@ namespace WindowsFormsApp19
 
         private void button9_Click(object sender, EventArgs e)
         {
-            UpdateRecord(int.Parse(textBox2.Text), DateTime.Now.ToString(), textBox3.Text, int.Parse(textBox4.Text));
+            UpdateRecord(int.Parse(textBox2.Text), DateTime.Now.ToString(), textBox3.Text, textBox4.Text);
 
         }
 

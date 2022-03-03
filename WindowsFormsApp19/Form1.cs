@@ -48,7 +48,7 @@ namespace WindowsFormsApp19
             query.Append(" NO INTEGER NOT NULL");
             query.Append(" ,DATETIME TEXT NOT NULL");
             query.Append(" ,NAME TEXT NOT NULL");
-            query.Append(" ,POINT INTEGER NOT NULL");
+            query.Append(" ,CONTENT TEXT NOT NULL");
             query.Append(" ,primary key (NO)");
             query.Append(")");
 
@@ -83,11 +83,11 @@ namespace WindowsFormsApp19
             }
         }
 
-        private void InsertRecord(int no, string datetime, string name, int point)
+        private void InsertRecord(int no, string datetime, string name, int content)
         {
             // レコードの登録
-            var query = "INSERT INTO PURCHASELIST (NO,DATETIME,NAME,POINT) VALUES (" +
-                $"{no},'{datetime}','{name}',{point})";
+            var query = "INSERT INTO PURCHASELIST (NO,DATETIME,NAME,CONTENT) VALUES (" +
+                $"{no},'{datetime}','{name}',{content})";
 
             // クエリー実行
             ExecuteNonQuery(query.ToString());
@@ -128,7 +128,7 @@ namespace WindowsFormsApp19
                     textBox1.Text = sdr["NO"].ToString();
                     textBox1.Text += sdr["DATETIME"].ToString();
                     textBox1.Text += sdr["NAME"].ToString();
-                    textBox1.Text += sdr["POINT"].ToString();
+                    textBox1.Text += sdr["CONTENT"].ToString();
                 }
                 sdr.Close();
             }
@@ -156,7 +156,7 @@ namespace WindowsFormsApp19
                     textBox1.Text += " : ";
                     textBox1.Text += sdr["NAME"].ToString();
                     textBox1.Text += " : ";
-                    textBox1.Text += sdr["POINT"].ToString();
+                    textBox1.Text += sdr["CONTENT"].ToString();
                     textBox1.Text += "\r\n";
                 }
                 sdr.Close();
@@ -185,10 +185,10 @@ namespace WindowsFormsApp19
             ExecuteNonQuery(query.ToString());
         }
 
-        private void UpdateRecord(int no, string datetime, string name, int point)
+        private void UpdateRecord(int no, string datetime, string name, int content)
         {
             // レコードの登録
-            var query = $"UPDATE PURCHASELIST SET DATETIME = '{datetime}', NAME = '{name}',POINT = '{point}' " +
+            var query = $"UPDATE PURCHASELIST SET DATETIME = '{datetime}', NAME = '{name}',CONTENT = '{content}' " +
                 $"WHERE NO = {no};";
 
             // クエリー実行
