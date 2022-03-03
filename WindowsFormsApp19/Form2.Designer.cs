@@ -49,6 +49,7 @@ namespace WindowsFormsApp19
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -232,11 +233,21 @@ namespace WindowsFormsApp19
             this.textBox6.Size = new System.Drawing.Size(65, 19);
             this.textBox6.TabIndex = 19;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(38, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 12);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "備忘録";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.textBox5);
@@ -287,5 +298,6 @@ namespace WindowsFormsApp19
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label4;
     }
 }
