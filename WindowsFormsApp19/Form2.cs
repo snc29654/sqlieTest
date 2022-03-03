@@ -25,11 +25,10 @@ namespace WindowsFormsApp19
             StringBuilder query = new StringBuilder();
             query.Clear();
             query.Append("CREATE TABLE IF NOT EXISTS PURCHASELIST (");
-            query.Append(" NO INTEGER NOT NULL");
+            query.Append(" NO INTEGER PRIMARY KEY AUTOINCREMENT");
             query.Append(" ,DATETIME TEXT NOT NULL");
             query.Append(" ,NAME TEXT NOT NULL");
             query.Append(" ,CONTENT TEXT NOT NULL");
-            query.Append(" ,primary key (NO)");
             query.Append(")");
 
             // クエリー実行
@@ -61,11 +60,11 @@ namespace WindowsFormsApp19
                 MessageBox.Show(ex.Message);
             }
         }
-        private void InsertRecord(int no, string datetime, string name, string content)
+        private void InsertRecord(string datetime, string name, string content)
         {
             // レコードの登録
-            var query = "INSERT INTO PURCHASELIST (NO,DATETIME,NAME,CONTENT) VALUES (" +
-                $"{no},'{datetime}','{name}','{content}')";
+            var query = "INSERT INTO PURCHASELIST (DATETIME,NAME,CONTENT) VALUES (" +
+                $"'{datetime}','{name}','{content}')";
 
             // クエリー実行
             ExecuteNonQuery(query.ToString());
@@ -74,10 +73,10 @@ namespace WindowsFormsApp19
 
         private void button2_Click(object sender, EventArgs e)
         {
-            InsertRecord(202101, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "日記", "記事１");
-            InsertRecord(202102, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "ニュース", "記事２");
-            InsertRecord(202103, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "メモ", "記事３");
-            InsertRecord(202104, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "住所", "記事４");
+            InsertRecord(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "日記", "記事１");
+            InsertRecord(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "ニュース", "記事２");
+            InsertRecord(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "メモ", "記事３");
+            InsertRecord(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "住所", "記事４");
 
         }
         private void DropTable()
@@ -168,7 +167,7 @@ namespace WindowsFormsApp19
 
         private void button5_Click(object sender, EventArgs e)
         {
-            InsertRecord(int.Parse(textBox2.Text), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), textBox3.Text, textBox4.Text);
+            InsertRecord(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), textBox3.Text, textBox4.Text);
 
         }
 
