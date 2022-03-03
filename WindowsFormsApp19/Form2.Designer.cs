@@ -50,6 +50,8 @@ namespace WindowsFormsApp19
             this.button11 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -64,17 +66,17 @@ namespace WindowsFormsApp19
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(141, 63);
+            this.button2.Location = new System.Drawing.Point(39, 102);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(84, 33);
             this.button2.TabIndex = 1;
-            this.button2.Text = "一括追加";
+            this.button2.Text = "サンプル追加";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(675, 63);
+            this.button3.Location = new System.Drawing.Point(675, 40);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(83, 33);
             this.button3.TabIndex = 2;
@@ -84,7 +86,7 @@ namespace WindowsFormsApp19
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(243, 63);
+            this.button4.Location = new System.Drawing.Point(129, 63);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(84, 33);
             this.button4.TabIndex = 3;
@@ -102,7 +104,7 @@ namespace WindowsFormsApp19
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(345, 63);
+            this.button5.Location = new System.Drawing.Point(443, 40);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(84, 33);
             this.button5.TabIndex = 5;
@@ -154,7 +156,7 @@ namespace WindowsFormsApp19
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(447, 63);
+            this.button8.Location = new System.Drawing.Point(537, 79);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(84, 31);
             this.button8.TabIndex = 11;
@@ -164,7 +166,7 @@ namespace WindowsFormsApp19
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(549, 63);
+            this.button9.Location = new System.Drawing.Point(443, 78);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(84, 33);
             this.button9.TabIndex = 12;
@@ -175,7 +177,7 @@ namespace WindowsFormsApp19
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(391, 119);
+            this.label1.Location = new System.Drawing.Point(399, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 13;
@@ -184,16 +186,16 @@ namespace WindowsFormsApp19
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(391, 179);
+            this.label2.Location = new System.Drawing.Point(401, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 14;
-            this.label2.Text = "記事";
+            this.label2.Text = "内容";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(391, 144);
+            this.label3.Location = new System.Drawing.Point(400, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 15;
@@ -201,9 +203,9 @@ namespace WindowsFormsApp19
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(141, 102);
+            this.button10.Location = new System.Drawing.Point(219, 63);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(84, 29);
+            this.button10.Size = new System.Drawing.Size(84, 33);
             this.button10.TabIndex = 16;
             this.button10.Text = "種別読み出し";
             this.button10.UseVisualStyleBackColor = true;
@@ -211,16 +213,16 @@ namespace WindowsFormsApp19
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(243, 107);
+            this.textBox5.Location = new System.Drawing.Point(219, 102);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(83, 19);
             this.textBox5.TabIndex = 17;
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(589, 118);
+            this.button11.Location = new System.Drawing.Point(675, 78);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(74, 24);
+            this.button11.Size = new System.Drawing.Size(83, 32);
             this.button11.TabIndex = 18;
             this.button11.Text = "レコード削除";
             this.button11.UseVisualStyleBackColor = true;
@@ -228,9 +230,9 @@ namespace WindowsFormsApp19
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(693, 120);
+            this.textBox6.Location = new System.Drawing.Point(675, 120);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(65, 19);
+            this.textBox6.Size = new System.Drawing.Size(83, 19);
             this.textBox6.TabIndex = 19;
             // 
             // label4
@@ -242,6 +244,24 @@ namespace WindowsFormsApp19
             this.label4.TabIndex = 20;
             this.label4.Text = "備忘録";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(184, 105);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 12);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "種別";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(639, 126);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 12);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "番号";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -252,8 +272,10 @@ namespace WindowsFormsApp19
             this.Controls.Add(this.button11);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.button10);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -299,5 +321,7 @@ namespace WindowsFormsApp19
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
