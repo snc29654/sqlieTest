@@ -118,6 +118,43 @@ namespace WindowsFormsApp19
 
         }
 
+
+        private void SerachRecordDataKind(string column, string word)
+        {
+            SQLiteConnection con = new SQLiteConnection("Data Source=Memo.db");
+            con.Open();
+            try
+            {
+
+
+                string sql = "SELECT * FROM PURCHASELIST WHERE " +
+                $"{column} = '{word}' ORDER BY NO ASC";
+
+
+                SQLiteCommand com = new SQLiteCommand(sql, con);
+                SQLiteDataReader sdr = com.ExecuteReader();
+                while (sdr.Read() == true)
+                {
+                    textBox1.Text += sdr["NO"].ToString();
+                    textBox1.Text += " : ";
+                    textBox1.Text += sdr["DATETIME"].ToString();
+                    textBox1.Text += " : ";
+                    textBox1.Text += sdr["NAME"].ToString();
+                    textBox1.Text += " : ";
+                    textBox1.Text += sdr["CONTENT"].ToString();
+                    textBox1.Text += "\r\n";
+                }
+                sdr.Close();
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
+
+
         private void button3_Click(object sender, EventArgs e)
         {
             DropTable();
@@ -198,6 +235,27 @@ namespace WindowsFormsApp19
 
         private void Form2_Load(object sender, EventArgs e)
         {
+
+        }
+        private void DeleteRecord(string column, string word)
+        {
+            // レコードの削除
+            var query = "DELETE FROM PURCHASELIST WHERE " +
+                $"{column} = '{word}'";
+
+            // クエリー実行
+            ExecuteNonQuery(query.ToString());
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            SerachRecordDataKind("NAME", textBox5.Text);
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            DeleteRecord("NO", textBox6.Text);
 
         }
     }

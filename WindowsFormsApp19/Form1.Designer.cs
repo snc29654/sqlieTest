@@ -77,7 +77,7 @@ namespace WindowsFormsApp19
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 41);
             this.button2.TabIndex = 1;
-            this.button2.Text = "モーダル";
+            this.button2.Text = "備忘録";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

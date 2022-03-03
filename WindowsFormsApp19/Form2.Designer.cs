@@ -45,6 +45,10 @@ namespace WindowsFormsApp19
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -115,9 +119,8 @@ namespace WindowsFormsApp19
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(443, 141);
-            this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(88, 29);
+            this.textBox3.Size = new System.Drawing.Size(88, 19);
             this.textBox3.TabIndex = 7;
             // 
             // textBox4
@@ -195,11 +198,49 @@ namespace WindowsFormsApp19
             this.label3.TabIndex = 15;
             this.label3.Text = "種別";
             // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(141, 102);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(84, 29);
+            this.button10.TabIndex = 16;
+            this.button10.Text = "種別読み出し";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(243, 107);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(83, 19);
+            this.textBox5.TabIndex = 17;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(589, 118);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(74, 24);
+            this.button11.TabIndex = 18;
+            this.button11.Text = "レコード削除";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(693, 120);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(65, 19);
+            this.textBox6.TabIndex = 19;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -242,5 +283,9 @@ namespace WindowsFormsApp19
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
