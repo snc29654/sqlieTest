@@ -100,8 +100,8 @@ namespace WindowsFormsApp19
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                 // 列名を指定します。
-                dataGridView1.Columns[0].HeaderText = "表番";
-                dataGridView1.Columns[1].HeaderText = "番号";
+                dataGridView1.Columns[0].HeaderText = "行番";
+                dataGridView1.Columns[1].HeaderText = "レコード番号";
                 dataGridView1.Columns[2].HeaderText = "日時";
                 dataGridView1.Columns[3].HeaderText = "種別";
                 dataGridView1.Columns[4].HeaderText = "内容";
@@ -152,8 +152,8 @@ namespace WindowsFormsApp19
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                 // 列名を指定します。
-                dataGridView1.Columns[0].HeaderText = "表番";
-                dataGridView1.Columns[1].HeaderText = "番号";
+                dataGridView1.Columns[0].HeaderText = "行番";
+                dataGridView1.Columns[1].HeaderText = "レコード番号";
                 dataGridView1.Columns[2].HeaderText = "日時";
                 dataGridView1.Columns[3].HeaderText = "種別";
                 dataGridView1.Columns[4].HeaderText = "内容";
