@@ -78,7 +78,7 @@ namespace WindowsFormsApp19
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(675, 40);
+            this.button3.Location = new System.Drawing.Point(848, 63);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(83, 33);
             this.button3.TabIndex = 2;
@@ -106,7 +106,7 @@ namespace WindowsFormsApp19
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(443, 40);
+            this.button5.Location = new System.Drawing.Point(616, 63);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(84, 33);
             this.button5.TabIndex = 5;
@@ -116,21 +116,21 @@ namespace WindowsFormsApp19
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(443, 119);
+            this.textBox2.Location = new System.Drawing.Point(616, 142);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(88, 19);
             this.textBox2.TabIndex = 6;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(443, 141);
+            this.textBox3.Location = new System.Drawing.Point(616, 164);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(88, 19);
             this.textBox3.TabIndex = 7;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(443, 176);
+            this.textBox4.Location = new System.Drawing.Point(616, 199);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(315, 219);
@@ -138,7 +138,7 @@ namespace WindowsFormsApp19
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(289, 398);
+            this.button6.Location = new System.Drawing.Point(447, 520);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(95, 39);
             this.button6.TabIndex = 9;
@@ -148,7 +148,7 @@ namespace WindowsFormsApp19
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(675, 401);
+            this.button7.Location = new System.Drawing.Point(848, 424);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(83, 33);
             this.button7.TabIndex = 10;
@@ -158,7 +158,7 @@ namespace WindowsFormsApp19
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(537, 79);
+            this.button8.Location = new System.Drawing.Point(710, 102);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(84, 31);
             this.button8.TabIndex = 11;
@@ -168,7 +168,7 @@ namespace WindowsFormsApp19
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(443, 78);
+            this.button9.Location = new System.Drawing.Point(616, 101);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(84, 33);
             this.button9.TabIndex = 12;
@@ -179,7 +179,7 @@ namespace WindowsFormsApp19
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(399, 123);
+            this.label1.Location = new System.Drawing.Point(572, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 13;
@@ -188,7 +188,7 @@ namespace WindowsFormsApp19
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(401, 179);
+            this.label2.Location = new System.Drawing.Point(574, 202);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 12);
             this.label2.TabIndex = 14;
@@ -197,7 +197,7 @@ namespace WindowsFormsApp19
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(400, 144);
+            this.label3.Location = new System.Drawing.Point(573, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 15;
@@ -222,7 +222,7 @@ namespace WindowsFormsApp19
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(675, 78);
+            this.button11.Location = new System.Drawing.Point(848, 101);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(83, 32);
             this.button11.TabIndex = 18;
@@ -232,7 +232,7 @@ namespace WindowsFormsApp19
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(675, 120);
+            this.textBox6.Location = new System.Drawing.Point(848, 143);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(83, 19);
             this.textBox6.TabIndex = 19;
@@ -258,7 +258,7 @@ namespace WindowsFormsApp19
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(639, 126);
+            this.label6.Location = new System.Drawing.Point(812, 149);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 12);
             this.label6.TabIndex = 13;
@@ -270,14 +270,14 @@ namespace WindowsFormsApp19
             this.dataGridView1.Location = new System.Drawing.Point(39, 141);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(355, 254);
+            this.dataGridView1.Size = new System.Drawing.Size(503, 363);
             this.dataGridView1.TabIndex = 21;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(947, 571);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox6);
