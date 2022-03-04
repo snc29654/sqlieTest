@@ -93,13 +93,28 @@ namespace WindowsFormsApp19
             con.Open();
             try
             {
+                // 列数を指定します。
+                dataGridView1.ColumnCount = 5;
+
+                // 列幅を表の表示領域いっぱいに調整します。
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                // 列名を指定します。
+                dataGridView1.Columns[0].HeaderText = "順番";
+                dataGridView1.Columns[1].HeaderText = "番号";
+                dataGridView1.Columns[2].HeaderText = "日時";
+                dataGridView1.Columns[3].HeaderText = "種別";
+                dataGridView1.Columns[4].HeaderText = "内容";
+
                 string sql = "SELECT * FROM PURCHASELIST  ORDER BY NO ASC";
 
                 SQLiteCommand com = new SQLiteCommand(sql, con);
                 SQLiteDataReader sdr = com.ExecuteReader();
+                int row = 0;
                 while (sdr.Read() == true)
                 {
                     textBox1.Text += sdr["NO"].ToString();
+                    dataGridView1.Rows.Add(row, sdr["NO"].ToString(), sdr["DATETIME"].ToString(), sdr["NAME"].ToString(), sdr["CONTENT"].ToString());
                     textBox1.Text += " : ";
                     textBox1.Text += sdr["DATETIME"].ToString();
                     textBox1.Text += " : ";
@@ -107,7 +122,12 @@ namespace WindowsFormsApp19
                     textBox1.Text += " : ";
                     textBox1.Text += sdr["CONTENT"].ToString();
                     textBox1.Text += "\r\n";
+                    row++;
                 }
+
+
+
+
                 sdr.Close();
             }
             finally
@@ -125,6 +145,18 @@ namespace WindowsFormsApp19
             try
             {
 
+                // 列数を指定します。
+                dataGridView1.ColumnCount = 5;
+
+                // 列幅を表の表示領域いっぱいに調整します。
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                // 列名を指定します。
+                dataGridView1.Columns[0].HeaderText = "順番";
+                dataGridView1.Columns[1].HeaderText = "番号";
+                dataGridView1.Columns[2].HeaderText = "日時";
+                dataGridView1.Columns[3].HeaderText = "種別";
+                dataGridView1.Columns[4].HeaderText = "内容";
 
                 string sql = "SELECT * FROM PURCHASELIST WHERE " +
                 $"{column} = '{word}' ORDER BY NO ASC";
@@ -132,8 +164,10 @@ namespace WindowsFormsApp19
 
                 SQLiteCommand com = new SQLiteCommand(sql, con);
                 SQLiteDataReader sdr = com.ExecuteReader();
+                int row = 0;
                 while (sdr.Read() == true)
                 {
+                    dataGridView1.Rows.Add(row, sdr["NO"].ToString(), sdr["DATETIME"].ToString(), sdr["NAME"].ToString(), sdr["CONTENT"].ToString());
                     textBox1.Text += sdr["NO"].ToString();
                     textBox1.Text += " : ";
                     textBox1.Text += sdr["DATETIME"].ToString();
@@ -142,6 +176,7 @@ namespace WindowsFormsApp19
                     textBox1.Text += " : ";
                     textBox1.Text += sdr["CONTENT"].ToString();
                     textBox1.Text += "\r\n";
+                    row++;
                 }
                 sdr.Close();
             }
@@ -174,6 +209,8 @@ namespace WindowsFormsApp19
         private void button6_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
 
         }
         public void SerachRecordData2(string column, string word)
