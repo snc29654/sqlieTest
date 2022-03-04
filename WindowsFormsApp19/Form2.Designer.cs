@@ -48,10 +48,8 @@ namespace WindowsFormsApp19
             this.button10 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -222,20 +220,13 @@ namespace WindowsFormsApp19
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(848, 101);
+            this.button11.Location = new System.Drawing.Point(459, 101);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(83, 32);
             this.button11.TabIndex = 18;
             this.button11.Text = "レコード削除";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(848, 143);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(83, 19);
-            this.textBox6.TabIndex = 19;
             // 
             // label4
             // 
@@ -255,15 +246,6 @@ namespace WindowsFormsApp19
             this.label5.TabIndex = 15;
             this.label5.Text = "種別";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(777, 149);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 12);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "レコード番号";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -280,14 +262,12 @@ namespace WindowsFormsApp19
             this.ClientSize = new System.Drawing.Size(947, 571);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -332,10 +312,8 @@ namespace WindowsFormsApp19
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -291,7 +291,9 @@ namespace WindowsFormsApp19
 
         private void button11_Click(object sender, EventArgs e)
         {
-            DeleteRecord("NO", textBox6.Text);
+
+            string s=dataGridView1[dataGridView1.CurrentCell.ColumnIndex+1, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+            DeleteRecord("NO", s);
 
         }
     }
