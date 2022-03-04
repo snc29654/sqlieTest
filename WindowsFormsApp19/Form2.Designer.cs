@@ -51,6 +51,7 @@ namespace WindowsFormsApp19
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,6 +119,7 @@ namespace WindowsFormsApp19
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(88, 19);
             this.textBox2.TabIndex = 6;
+            this.textBox2.Visible = false;
             // 
             // textBox3
             // 
@@ -182,6 +184,7 @@ namespace WindowsFormsApp19
             this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 13;
             this.label1.Text = "レコード番号";
+            this.label1.Visible = false;
             // 
             // label2
             // 
@@ -255,11 +258,21 @@ namespace WindowsFormsApp19
             this.dataGridView1.Size = new System.Drawing.Size(503, 363);
             this.dataGridView1.TabIndex = 21;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(706, 73);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(123, 12);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "レコード番号は自動採番";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 571);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button11);
@@ -315,5 +328,6 @@ namespace WindowsFormsApp19
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label6;
     }
 }
