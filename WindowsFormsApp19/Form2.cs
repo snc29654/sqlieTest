@@ -259,12 +259,23 @@ namespace WindowsFormsApp19
 
         private void button8_Click(object sender, EventArgs e)
         {
-            SerachRecordData2("NO", textBox2.Text);
+
+            string s = dataGridView1[dataGridView1.CurrentCell.ColumnIndex + 1, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+            textBox2.Text = s;
+            string s1 = dataGridView1[dataGridView1.CurrentCell.ColumnIndex + 3, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+            textBox3.Text = s1;
+            string s2 = dataGridView1[dataGridView1.CurrentCell.ColumnIndex + 4, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+            textBox4.Text = s2;
+
+
+            //SerachRecordData2("NO", textBox2.Text);
 
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
+
+
             UpdateRecord(int.Parse(textBox2.Text), DateTime.Now.ToString(), textBox3.Text, textBox4.Text);
 
         }

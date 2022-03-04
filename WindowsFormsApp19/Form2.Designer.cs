@@ -156,17 +156,17 @@ namespace WindowsFormsApp19
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(710, 102);
+            this.button8.Location = new System.Drawing.Point(616, 102);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(84, 31);
+            this.button8.Size = new System.Drawing.Size(117, 31);
             this.button8.TabIndex = 11;
-            this.button8.Text = "番号検索";
+            this.button8.Text = "レコード読み出し";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(616, 101);
+            this.button9.Location = new System.Drawing.Point(739, 101);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(84, 33);
             this.button9.TabIndex = 12;
