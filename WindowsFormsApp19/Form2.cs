@@ -292,8 +292,16 @@ namespace WindowsFormsApp19
         private void button11_Click(object sender, EventArgs e)
         {
 
-            string s=dataGridView1[dataGridView1.CurrentCell.ColumnIndex+1, dataGridView1.CurrentCell.RowIndex].Value.ToString();
+            string s =dataGridView1[dataGridView1.CurrentCell.ColumnIndex+1, dataGridView1.CurrentCell.RowIndex].Value.ToString();
             DeleteRecord("NO", s);
+
+
+            textBox1.Clear();
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
+
+            SerachRecordDataAll();
+
 
         }
     }
