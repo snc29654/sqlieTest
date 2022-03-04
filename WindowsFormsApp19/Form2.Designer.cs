@@ -210,7 +210,7 @@ namespace WindowsFormsApp19
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(84, 33);
             this.button10.TabIndex = 16;
-            this.button10.Text = "種別読み出し";
+            this.button10.Text = "種別絞り込み";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
