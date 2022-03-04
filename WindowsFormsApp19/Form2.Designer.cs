@@ -270,7 +270,7 @@ namespace WindowsFormsApp19
             this.dataGridView1.Location = new System.Drawing.Point(39, 141);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(398, 254);
+            this.dataGridView1.Size = new System.Drawing.Size(355, 254);
             this.dataGridView1.TabIndex = 21;
             // 
             // Form2
